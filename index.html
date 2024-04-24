@@ -13,13 +13,13 @@
         <div class="bet-container">
             <label for="bet-type">Bet Type:</label>
             <select id="bet-type">
-                <option value="number" onclick="og()">Number</option>
-                <option value="even" onclick="enable()" >Even</option>
-                <option value="odd" onclick="enable()">Odd</option>
-                <option value="red" onclick="enable()">Red</option>
-                <option value="black" onclick="enable()">Black</option>
-                <option value="row" onclick="disable()">Row</option>
-                <option value="column" onclick="disable()">Column</option>
+                <option id="number" value="number">Number</option>
+                <option id="even" value="even" >Even</option>
+                <option id="odd" value="odd">Odd</option>
+                <option id="red" value="red">Red</option>
+                <option id="black" value="black">Black</option>
+                <option id="row" value="row">Row</option>
+                <option id="column" value="column">Column</option>
             </select>
             <input type="tel" id="bet-number" placeholder="Enter bet number/row/col" min="1" max="36">
             <input type="tel" id="bet-amount" placeholder="Enter bet amount" min="1">
