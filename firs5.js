@@ -6,6 +6,8 @@ const ghum = document.getElementById("spin-button");
 let bet = betType.value;
 let red = [1, 3, 5, 7, 9, 12, 14, 16, 18, 21, 23, 25, 27, 30, 32, 34, 36];
 let black = [2, 4, 6, 8, 10, 11, 13, 15, 17, 19, 20, 22, 24, 26, 28, 29, 31, 33, 35];
+let balanceText = document.getElementById('bal');
+let balance = 1000;
 
 const check = () => {
   const Bet = betType.value;
@@ -33,7 +35,7 @@ const check = () => {
       "Invalid row/column bet. Please enter a number between 1 and 3.";
     return;
   }
-
+console.log(balance);
   // setTimeout(()=> {
   uh.textContent = "Spning the wheel....";
   // },1000);
@@ -77,6 +79,8 @@ const check = () => {
       } else if (Bet === "red" || Bet === "black") {
         payout = betAmt * 5;
       }
+      balance += payout;
+      balanceText.textContent = balance;
     }
 
     if (win) {
@@ -84,6 +88,8 @@ const check = () => {
     } else {
       uh.textContent = "You lost!";
     }
+    balance -= betAmt;
+    balanceText.innerText =balance;
   }, 3750);
 };
 
