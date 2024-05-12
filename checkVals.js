@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("result").textContent = " ";
   };
 
-  numdis.addEventListener("click", og);
+  numdis.addEventListener("change", og);
 
-  evedis.addEventListener("click", enable);
-  odddids.addEventListener("click", enable);
-  reddis.addEventListener("click", enable);
-  blackdis.addEventListener("click", enable);
+  evedis.addEventListener("change", enable);
+  odddids.addEventListener("change", enable);
+  reddis.addEventListener("change", enable);
+  blackdis.addEventListener("change", enable);
 
-  rowdis.addEventListener("click", disable);
-  columndis.addEventListener("click", disable);
+  rowdis.addEventListener("change", disable);
+  columndis.addEventListener("change", disable);
 });
