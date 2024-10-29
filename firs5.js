@@ -9,7 +9,20 @@ let black = [2, 4, 6, 8, 10, 11, 13, 15, 17, 19, 20, 22, 24, 26, 28, 29, 31, 33,
 let balanceText = document.getElementById('bal');
 let balance = 1000;
 
+
 const check = () => {
+
+ if (balance <= 0) {
+   uh.textContent = "Insufficient balance amount....";
+    console.log('bal less then xero')
+   return;
+}
+  else {
+    console.log('greater')
+  }
+
+
+  
   const Bet = betType.value;
 
   const betNo = parseInt(betNumber.value, 10);
@@ -89,7 +102,14 @@ console.log(balance);
       uh.textContent = "You lost!";
     }
     balance -= betAmt;
-    balanceText.innerText =balance;
+
+     if (balance <= 0) {
+  balanceText.innerText = 0;
+   }
+  else {
+    balanceText.innerText =balance; 
+  }
+
   }, 3750);
 };
 
